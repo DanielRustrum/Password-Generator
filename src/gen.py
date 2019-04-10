@@ -1,7 +1,5 @@
 import random, json, hashlib, requests
 
-
-
 def hashGen():
     password = ''.join(random.choices(characterList, k=passwordLength))
     sha = hashlib.sha1()
@@ -36,7 +34,7 @@ if __name__ == "__main__":
             if checkIfSecure(shaHash):
                 havePass = True
                 break
-            print("Re-attepmting: {} not valid".format(password))
+            print("Re-attempting: {} not valid".format(password))
         print("Found: {}".format(password))
     except:
         print("\n\nsee you later cowboy")
